@@ -1,5 +1,5 @@
 <template>
-<h4>Explorer</h4>
+<h4>Mission Commander</h4>
   <div v-if="currentExplorer" class="edit-form">
     <form>
       <div class="form-group">
@@ -15,14 +15,14 @@
         />
       </div>
       <div class="form-group">
-        <label for="title">Misión</label>
+        <label for="title">Main Stack</label>
         <input type="text" class="form-control" id="title"
-          v-model="currentExplorer.mission"
+          v-model="currentExplorer.mainStack"
         />
       </div>
     </form>
     <button class="btn btn-danger mr-2" @click="deleteExplorer">
-      Eliminar Explorer
+      Eliminar Mission Commander
     </button>
     <button type="submit" class="btn btn-info mr-2" @click="updateExplorer">
       Actualizar
@@ -31,7 +31,7 @@
   </div>
   <div v-else>
     <br />
-    <p> Selecciona un explorer. </p>
+    <p> Selecciona un Mission Commander. </p>
   </div>
 </template>
 <script>

@@ -1,7 +1,7 @@
 <template>
   <div class="list row">
     <div class="col-md-6">
-      <h4> Explorers Inscritos </h4>
+      <h4> Mission Commanders </h4>
       <ul class="list-group">
         <li class="list-group-item"
           :class="{ active: index == currentIndex }"
@@ -16,17 +16,17 @@
     </div>
     <div class="col-md-6">
       <div v-if="currentExplorer">
-        <h4>Explorer</h4>
+        <h4>Mission Commander</h4>
         <div>
           <br><label><strong>Nombre:</strong></label> {{ currentExplorer.name}}
           <br><label><strong>Username:</strong></label> {{ currentExplorer.username}}
-          <br><label><strong>Mission:</strong></label> {{ currentExplorer.mission}}
+          <br><label><strong>Main Stack:</strong></label> {{ currentExplorer.mainStack}}
         </div>
-        <router-link :to="'/explorer/' + currentExplorer.id" class="btn btn-info"> Editar</router-link>
+        <router-link :to="'/commander/' + currentExplorer.id" class="btn btn-info"> Editar </router-link>
       </div>
       <div v-else>
         <br />
-        <p> Selecciona un explorer.</p>
+        <p> Selecciona un Mission Commander.</p>
       </div>
     </div>
   </div>

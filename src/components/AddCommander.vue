@@ -1,9 +1,9 @@
 <template>
   <div class="submit-form">
     <div v-if="!submitted">
-    <h3>Nuevo Explorer</h3>
+    <h3>Nuevo Mission Commander</h3>
       <div class="form-group">
-        <label for="title">Nombre </label>
+        <label for="title">Nombre</label>
         <input
           type="text"
           class="form-control"
@@ -25,13 +25,13 @@
         />
       </div>
       <div class="form-group">
-        <label for="title">Misión</label>
+        <label for="title">Main Stack</label>
         <input
           type="text"
           class="form-control"
           id="mission"
           required
-          v-model="explorer.mission"
+          v-model="explorer.mainStack"
           name="mission"
         />
       </div>
@@ -64,7 +64,7 @@ export default {
       var data = {
         name: this.explorer.name,
         username: this.explorer.username,
-        mission: this.explorer.mission
+        mainStack: this.explorer.mainStack
       };
       ExplorerService.create(data)
         .then(response => {
